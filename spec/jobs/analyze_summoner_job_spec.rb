@@ -27,6 +27,8 @@ RSpec.describe AnalyzeSummonerJob, :type => :job do
       ActiveJob::Base.queue_adapter = :test
       AnalyzeSummonerJob.perform_now()
       expect(riot_client).to have_received(:get_summoner_info).with(username)
+
+      expect(Summoner.count).to eq(1)
     end
   end
 end
