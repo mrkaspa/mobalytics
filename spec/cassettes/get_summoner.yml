@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://la1.api.riotgames.com/lol/summoner/v4/summoners/by-name/mrkaspa07?api_key=RGAPI-76e21c80-a0f5-4e80-a93f-2b32574eb830
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 03 Feb 2022 19:44:12 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      X-App-Rate-Limit:
+      - 20:1,100:120
+      X-App-Rate-Limit-Count:
+      - 1:1,1:120
+      X-Method-Rate-Limit:
+      - 1000:60
+      X-Method-Rate-Limit-Count:
+      - 1:60
+      X-Riot-Edge-Trace-Id:
+      - da1e35f1-5dad-40f5-9b50-97042631c6ed
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, PUT, DELETE, POST, OPTIONS
+      Access-Control-Allow-Headers:
+      - DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range
+      Access-Control-Expose-Headers:
+      - Content-Length,Content-Range
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"q3z8TJVRZwqjeOu6nl73CbRIxeOlr5RvAaz3DdnArjUN7l5DErgv07dmEQ","accountId":"RK38eqhlZ2b10Jb7ykYoNAo8WDI-p_Yuz0QWRTUWRI3Gt0Gm1YB32o4W","puuid":"lFw9rp8no1sx03ZdrAk1XPrObjEqV6W3ujgsJUKyGp8cQhTJmyqFFmT88yOec0f1HaB9hejZQ3ftdQ","name":"mrkaspa07","profileIconId":5134,"revisionDate":1643553748000,"summonerLevel":77}'
+  recorded_at: Thu, 03 Feb 2022 19:44:12 GMT
+recorded_with: VCR 6.0.0

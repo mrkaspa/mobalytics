@@ -14,6 +14,8 @@ gem "puma", "~> 5.0"
 
 gem "sidekiq", "~> 6.4"
 
+gem 'httparty', '~> 0.20.0'
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
@@ -43,6 +45,10 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 
   gem 'rspec-rails', '~> 5.0.0'
+
+  gem 'vcr', '~> 6.0'
+
+  gem 'faraday'
 end
 
 group :development do

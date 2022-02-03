@@ -57,5 +57,6 @@ Rails.application.configure do
 
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
-  config.riot_url = 'http://lol.com'
+  config.riot_url = "https://la1.api.riotgames.com"
+  config.riot_token = "RGAPI-76e21c80-a0f5-4e80-a93f-2b32574eb830"
 end
