@@ -17,7 +17,7 @@ class AnalyzeSummonerJob < ApplicationJob
     info = RiotClient.new(url: Rails.application.config.riot_url).get_summoner_info(summoner_id)
     sum = Summoner.new(info)
 
-    sum.save
+    sum.save.inspect
     sum
   end
 end
