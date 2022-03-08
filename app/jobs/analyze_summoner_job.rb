@@ -14,10 +14,21 @@ class AnalyzeSummonerJob < ApplicationJob
   end
 
   def update_information(summoner_id)
-    info = RiotClient.new(url: Rails.application.config.riot_url).get_summoner_info(summoner_id)
-    sum = Summoner.new(info)
+    info = RiotClient.new(url: Rails.application.config.riot_url, token: Rails.application.config.riot_token).get_summoner_info(summoner_id)
 
-    sum.save.inspect
-    sum
+    puts info.inspect
+
+    case info
+    in {accountId: account_id, puuid: puuid, name: name}
+      puts "entro a guardar"
+      sum = Summoner.new({
+        "account_id": account_id,
+        "puuid": puuid,
+        "name": name,
+      })
+
+      sum.save.inspect
+      sum
+    end
   end
 end

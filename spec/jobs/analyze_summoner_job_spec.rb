@@ -33,7 +33,7 @@ RSpec.describe AnalyzeSummonerJob, :type => :job do
 
     it "should fetch and store the information" do
       allow(riot_client).to receive(:get_summoner_info).and_return(user_data)
-      RiotClient.new(url: "").get_summoner_info(username)
+      RiotClient.new(url: "", token: "").get_summoner_info(username)
 
       ActiveJob::Base.queue_adapter = :test
       AnalyzeSummonerJob.perform_now()
